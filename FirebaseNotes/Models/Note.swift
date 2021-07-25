@@ -9,8 +9,8 @@ import Foundation
 
 
 struct Note: Codable {
-    
-    var id: String
+    let id: String
     var title: String
     var body: String
+    var dateModified: Date
 }

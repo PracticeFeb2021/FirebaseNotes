@@ -24,7 +24,7 @@ class NoteViewModel {
         router.trigger(.logout)
     }
     func saveButtonPressed() {
-        firebaseDB.save(note: note.value)
+        firebaseDB.updateNote(note.value)
     }
     
     //MARK: - Private properties

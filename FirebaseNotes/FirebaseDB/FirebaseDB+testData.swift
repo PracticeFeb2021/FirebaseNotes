@@ -12,7 +12,7 @@ extension FirebaseDB {
     static let testNotes: [Note] = {
         var notes = [Note]()
         for i in 1...10 {
-            let note = Note(id: UUID().uuidString, title: Lorem.title, body: Lorem.paragraphs(3))
+            let note = Note(id: UUID().uuidString, title: Lorem.title, body: Lorem.paragraphs(3), dateModified: Date())
             notes.append(note)
         }
         return notes

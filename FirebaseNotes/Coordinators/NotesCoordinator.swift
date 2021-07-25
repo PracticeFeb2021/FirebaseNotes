@@ -6,7 +6,7 @@ import FirebaseAuth
 enum NotesRoute: Route {
     case noteList
     case logout
-    //case note(Note)
+    case note(Note)
 }
 
 class NotesCoordinator: NavigationCoordinator<NotesRoute> {
@@ -23,14 +23,17 @@ class NotesCoordinator: NavigationCoordinator<NotesRoute> {
         switch route {
         case .noteList:
             let vc = NoteListVC.instantiateFromNib()
-            let viewModel = NoteListViewModel(router: unownedRouter)
+            let viewModel = NoteListViewModel(router: unownedRouter, firebaseDB: FirebaseDB.shared)
             vc.viewModel = viewModel
             return .push(vc)
         case .logout:
-            //TODO: logout
-            //Auth.auth().currentUser.lo
             homeRouter.trigger(.logout)
             return .none()
+        case .note(let note):
+            let vc = NoteVC.instantiateFromNib()
+            let viewModel = NoteViewModel(note, unownedRouter, FirebaseDB.shared)
+            vc.viewModel = viewModel
+            return .push(vc)
         }
     }
 }

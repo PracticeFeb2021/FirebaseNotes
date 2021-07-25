@@ -12,4 +12,5 @@ target 'FirebaseNotes' do
 #  pod 'FBSDKShareKit'
 
   pod 'XCoordinator', '~> 2.0'
+  pod 'SwiftyUserDefaults', '~> 5.0'
 end

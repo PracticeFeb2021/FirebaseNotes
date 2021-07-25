@@ -1,9 +1,3 @@
-//
-//  LoginViewController.swift
-//  Twittur
-//
-//  Created by Programador on 21/07/2021.
-//
 
 import UIKit
 import Firebase

@@ -405,6 +405,7 @@ PODS:
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
+  - SwiftyUserDefaults (5.3.0)
   - XCoordinator (2.0.7):
     - XCoordinator/Core (= 2.0.7)
   - XCoordinator/Core (2.0.7)
@@ -413,6 +414,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseUI
+  - SwiftyUserDefaults (~> 5.0)
   - XCoordinator (~> 2.0)
 
 SPEC REPOS:
@@ -452,6 +454,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SDWebImage
+    - SwiftyUserDefaults
     - XCoordinator
 
 SPEC CHECKSUMS:
@@ -490,8 +493,9 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: 2344ca9f04c3baf189d5d2e24b696c25a91e9753
+PODFILE CHECKSUM: 030b3cd6afffb4d0db2c165861d77816237f9ad5
 
 COCOAPODS: 1.10.1

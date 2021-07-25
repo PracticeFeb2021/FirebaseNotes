@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SwiftyUserDefaults
 import FirebaseGoogleAuthUI
 import FirebaseCore
 import FirebaseEmailAuthUI
@@ -22,6 +23,7 @@ class LoginVC: UIViewController, FUIAuthDelegate {
     static let testPassword = "password"
     
     var authUI: FUIAuth!
+    weak var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +31,16 @@ class LoginVC: UIViewController, FUIAuthDelegate {
             
         authUI = FUIAuth.defaultAuthUI()
         authUI.delegate = self
-        
-        // check if logged in
+        handle = Auth.auth().addStateDidChangeListener { auth, user in
+            if let user = user {
+                Defaults[\.userUID] = user.uid
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if authUI.auth?.currentUser != nil {
             viewModel.signInLoggedInUser()
-            return
         }
     }
     
@@ -52,9 +59,9 @@ class LoginVC: UIViewController, FUIAuthDelegate {
         ]
         if authUI.auth?.currentUser == nil {
             self.authUI.providers = providers
-            let loginViewController = authUI.authViewController()
-            loginViewController.modalPresentationStyle = .fullScreen
-            present(loginViewController, animated: true, completion: nil)
+            let loginVC = authUI.authViewController()
+            loginVC.modalPresentationStyle = .fullScreen
+            present(loginVC, animated: true)
         } else {
             viewModel.signInLoggedInUser()
         }

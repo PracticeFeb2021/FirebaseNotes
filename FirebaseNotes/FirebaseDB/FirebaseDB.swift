@@ -107,14 +107,30 @@ class FirebaseDB: FirebaseDatabaseP {
     }
     
     func deleteNotes(ids: [String], completion: ((Result<Bool, Error>) -> Void)?) {
-        
+        ids.forEach { id in
+            deleteNote(id: id)
+        }
     }
     
     func deleteNote(id: String, completion: ((Result<Bool, Error>) -> Void)?) {
-        
+        db.collection(K.DB.notes.rawValue).document(id).delete() { err in
+            if let err = err {
+                print("Error deleting note: \(err)")
+                completion?(.failure(err))
+            } else {
+                completion?(.success(true))
+            }
+        }
     }
     
     func deleteUser(uid: String, completion: ((Result<Bool, Error>) -> Void)?) {
-        
+        db.collection(K.DB.users.rawValue).document(uid).delete() { err in
+            if let err = err {
+                print("Error deleting user: \(err)")
+                completion?(.failure(err))
+            } else {
+                completion?(.success(true))
+            }
+        }
     }
 }

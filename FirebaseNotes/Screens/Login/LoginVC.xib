@@ -18,15 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" backIndicatorImage="chevron.backward.circle" catalog="system" id="nUZ-zI-mKG">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Login" id="PHH-iC-gzM"/>
-                    </items>
-                </navigationBar>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Nc-hW9">
-                    <rect key="frame" x="181" y="218" width="52" height="60"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Nc-hW9">
+                    <rect key="frame" x="181" y="194" width="52" height="110"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-9P-4FN">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -36,7 +29,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wc-2g-8fi">
-                            <rect key="frame" x="0.0" y="30" width="52" height="30"/>
+                            <rect key="frame" x="0.0" y="80" width="52" height="30"/>
                             <state key="normal" title="Sign up"/>
                             <connections>
                                 <action selector="signUpButtonTapped:" destination="-1" eventType="touchUpInside" id="CiS-uI-g2f"/>
@@ -49,13 +42,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="WBg-Nc-hW9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HBK-At-e8Z"/>
-                <constraint firstItem="WBg-Nc-hW9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-200" id="t4p-cB-y1d"/>
+                <constraint firstItem="WBg-Nc-hW9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="yWu-Gy-8x1"/>
             </constraints>
             <point key="canvasLocation" x="-204" y="106"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

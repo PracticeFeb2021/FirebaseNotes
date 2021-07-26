@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="FirebaseNotes" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="tyj-J9-833" id="zHA-X3-nVn"/>
+                <outlet property="passwordTextField" destination="8aS-xQ-ogd" id="PBs-QP-Puv"/>
+                <outlet property="userNameTextField" destination="L2O-DO-V8V" id="m5o-vi-GBH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WQz-dN-xqm"/>
             </connections>
         </placeholder>
@@ -18,37 +21,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-mr-dgH">
-                    <rect key="frame" x="144.5" y="233" width="125" height="30"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-mr-dgH">
+                    <rect key="frame" x="30" y="194" width="354" height="125.5"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-Jb-08R">
-                            <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
-                            <state key="normal" title="Sign up with email"/>
-                            <connections>
-                                <action selector="signUpPressed:" destination="-1" eventType="touchUpInside" id="e4s-wh-8FA"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-aO-etf">
+                            <rect key="frame" x="0.0" y="12" width="87.5" height="101.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P89-2T-teR" userLabel="Username">
+                                    <rect key="frame" x="0.0" y="0.0" width="87.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVq-gr-Jso" userLabel="Email">
+                                    <rect key="frame" x="0.0" y="40.5" width="87.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-yG-18i" userLabel="Password">
+                                    <rect key="frame" x="0.0" y="81" width="87.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-RS-4cj">
+                            <rect key="frame" x="107.5" y="0.0" width="246.5" height="125.5"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-DO-V8V" userLabel="Username Text Field">
+                                    <rect key="frame" x="0.0" y="0.0" width="246.5" height="28.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyj-J9-833" userLabel="Textfield Text Field">
+                                    <rect key="frame" x="0.0" y="48.5" width="246.5" height="28.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aS-xQ-ogd" userLabel="Password Text Field">
+                                    <rect key="frame" x="0.0" y="97" width="246.5" height="28.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
-                <navigationBar contentMode="scaleToFill" backIndicatorImage="chevron.backward.circle" catalog="system" id="BD2-Yx-dne">
-                    <rect key="frame" x="8" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Sign Up" id="o9W-IJ-6ot"/>
-                    </items>
-                </navigationBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-Jb-08R">
+                    <rect key="frame" x="181" y="369.5" width="52" height="30"/>
+                    <state key="normal" title="Sign up"/>
+                    <connections>
+                        <action selector="signUpPressed:" destination="-1" eventType="touchUpInside" id="e4s-wh-8FA"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="S8c-mr-dgH" secondAttribute="trailing" constant="30" id="AI7-RF-9jN"/>
+                <constraint firstItem="a7Z-Jb-08R" firstAttribute="top" secondItem="S8c-mr-dgH" secondAttribute="bottom" constant="50" id="CMa-PK-dZU"/>
                 <constraint firstItem="S8c-mr-dgH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gED-ap-Y9S"/>
-                <constraint firstItem="S8c-mr-dgH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-200" id="wSi-ND-tyw"/>
+                <constraint firstItem="S8c-mr-dgH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="q9S-y9-kXa"/>
+                <constraint firstItem="S8c-mr-dgH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="u7f-Yh-szD"/>
+                <constraint firstItem="a7Z-Jb-08R" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yL0-uI-PqD"/>
             </constraints>
             <point key="canvasLocation" x="-204" y="106"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

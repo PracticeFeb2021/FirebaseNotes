@@ -25,10 +25,6 @@ class SignUpViewModel {
         }
     }
 
-    func logInPressed() {
-        loginRouter.trigger(.login)
-    }
-
     //MARK: - Private properties
     
     private let loginRouter: UnownedRouter<LoginRoute>

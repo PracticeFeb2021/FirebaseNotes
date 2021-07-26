@@ -42,7 +42,7 @@
 		11AB6F0A26ABFF3900A8ED62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AB6F0926ABFF3900A8ED62 /* Assets.xcassets */; };
 		11AB6F0D26ABFF3900A8ED62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AB6F0B26ABFF3900A8ED62 /* LaunchScreen.storyboard */; };
 		11AB6F1926AC004500A8ED62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AB6F1826AC004500A8ED62 /* GoogleService-Info.plist */; };
-		11F9BDA226ADF84500329C43 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F9BDA126ADF84500329C43 /* Encodable.swift */; };
+		11F9BDA226ADF84500329C43 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F9BDA126ADF84500329C43 /* Codable.swift */; };
 		514F123C4DCE3C51B975A03B /* Pods_FirebaseNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EA6E0D46E22DFBFFEAC6D2 /* Pods_FirebaseNotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,7 @@
 		11AB6F0C26ABFF3900A8ED62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11AB6F0E26ABFF3900A8ED62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11AB6F1826AC004500A8ED62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		11F9BDA126ADF84500329C43 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		11F9BDA126ADF84500329C43 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		4CF5BD5BF0AAF49C77DDE0A7 /* Pods-FirebaseNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotes.release.xcconfig"; path = "Target Support Files/Pods-FirebaseNotes/Pods-FirebaseNotes.release.xcconfig"; sourceTree = "<group>"; };
 		C7EA6E0D46E22DFBFFEAC6D2 /* Pods_FirebaseNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,7 +147,7 @@
 				110D74CD26AC581C00508440 /* UIViewController.swift */,
 				110D74CE26AC581C00508440 /* Transition.swift */,
 				110D74CF26AC581C00508440 /* NibInitializable.swift */,
-				11F9BDA126ADF84500329C43 /* Encodable.swift */,
+				11F9BDA126ADF84500329C43 /* Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 				110D74FD26AC581D00508440 /* AppCoordinator.swift in Sources */,
 				110D752326AC60DD00508440 /* Box.swift in Sources */,
 				110D751F26AC5DAC00508440 /* SignUpViewModel.swift in Sources */,
-				11F9BDA226ADF84500329C43 /* Encodable.swift in Sources */,
+				11F9BDA226ADF84500329C43 /* Codable.swift in Sources */,
 				110D74FC26AC581D00508440 /* NotesCoordinator.swift in Sources */,
 				1103172326AD7D8500A3829F /* FirebaseDatabaseP.swift in Sources */,
 				110D74F026AC581D00508440 /* Transition.swift in Sources */,
